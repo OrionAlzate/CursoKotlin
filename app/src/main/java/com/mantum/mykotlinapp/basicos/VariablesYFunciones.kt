@@ -122,4 +122,7 @@ fun VariablesYFunciones() {
     var llamadoFuncReturn:String = retornarSaludo("Carlos") //almacenar el valor retornado en una variable
     print(llamadoFuncReturn)
 
+    fun restar(num1:Int, num2:Int):Int = num1 - num2 // declarado sin las llaves en una sola línea
+    var resultadoResta : String = "El resultado es: ${restar(15,5)}"
+
 }

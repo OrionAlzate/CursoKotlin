@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyKotlinApp</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
+    <string name="btn_volver">Volver</string>
+    <string name="btn_ingresar">Ingresar</string>
 </resources>

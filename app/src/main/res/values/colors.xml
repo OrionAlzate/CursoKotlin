@@ -2,4 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="verde_botones">#d3ffd3</color>
+    <color name="morado_botones_contraste">#36b336</color>
+
+
+    <color name="backgroundComponent">#1D1E33</color>
+    <color name="backgroundComponent_selected">#FF111328</color>
+    <color name="backgroundApp">#0E0B20</color>
+    <color name="backgroundButton">#EB1555</color>
+    <color name="textTitulos">#FF8D8E98</color>
+
+
+
+
+
 </resources>
