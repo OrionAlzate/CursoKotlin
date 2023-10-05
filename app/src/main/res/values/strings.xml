@@ -4,4 +4,6 @@
     <string name="female">Mujer</string>
     <string name="btn_volver">Volver</string>
     <string name="btn_ingresar">Ingresar</string>
+    <string name="alturaIMC">Altura</string>
+
 </resources>
