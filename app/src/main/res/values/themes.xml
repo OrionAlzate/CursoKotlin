@@ -2,8 +2,12 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MyKotlinApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">#0E0B20</item>
     </style>
 
     <style name="Theme.MyKotlinApp" parent="Base.Theme.MyKotlinApp" />
+    <style name = "NoActionBar" parent = "@android:style/Theme.Holo.Light">
+        <item name = "android:windowActionBar">false</item>
+        <item name = "android:windowNoTitle">true</item>
+    </style>
 </resources>

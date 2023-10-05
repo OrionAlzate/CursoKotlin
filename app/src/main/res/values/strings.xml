@@ -5,5 +5,5 @@
     <string name="btn_volver">Volver</string>
     <string name="btn_ingresar">Ingresar</string>
     <string name="alturaIMC">Altura</string>
-
+    <string name="calcular">Calcular</string>
 </resources>

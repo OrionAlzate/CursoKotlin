@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -20,21 +21,17 @@ class ImcAppActivity : AppCompatActivity() {
     private var isFemaleSelected : Boolean = false
     private var pesoInicial = 60
     private var edadInicial = 22
-
     private  lateinit var viewMale:CardView
     private lateinit var viewFemale:CardView
     private lateinit var tv_laAltura : TextView
     private lateinit var rsAltura : RangeSlider
-
     private lateinit var tvPeso : TextView
     private lateinit var tvEdad : TextView
-
     private lateinit var btnMenosPeso : FloatingActionButton
     private lateinit var btnMasPeso : FloatingActionButton
     private lateinit var btnMenosEdad : FloatingActionButton
     private lateinit var btnMasEdad : FloatingActionButton
-
-
+    private lateinit var btn_calcular : AppCompatButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,15 +41,10 @@ class ImcAppActivity : AppCompatActivity() {
             btn_imcBkMenu.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
-
         }
-
-
             initComponents()
             initListeners()
             initUI()
-
-
     }
 
     private fun initComponents(){
@@ -66,7 +58,7 @@ class ImcAppActivity : AppCompatActivity() {
         tvEdad = findViewById(R.id.tvEdad)
         btnMenosEdad = findViewById(R.id.btnMenosEdad)
         btnMasEdad = findViewById(R.id.btnMasEdad)
-
+        btn_calcular = findViewById(R.id.btn_calcular)
 
     }
     private fun initListeners() {
@@ -84,26 +76,29 @@ class ImcAppActivity : AppCompatActivity() {
             val result = decimalFormat.format(value)
             tv_laAltura.text = "$result cm"
         }
-        btnMenosPeso.setOnClickListener(View.OnClickListener {
+        btnMenosPeso.setOnClickListener{
             pesoInicial--
             actualizarPeso()
-
-        })
-        btnMasPeso.setOnClickListener(View.OnClickListener {
+        }
+        btnMasPeso.setOnClickListener{
             pesoInicial++
             actualizarPeso()
-        })
-
-        btnMenosEdad.setOnClickListener(View.OnClickListener {
+        }
+        btnMenosEdad.setOnClickListener{
             edadInicial--
             actualizarEdad()
-        })
-        btnMasEdad.setOnClickListener(View.OnClickListener {
+        }
+        btnMasEdad.setOnClickListener {
             edadInicial++
             actualizarEdad()
-        })
+        }
+        btn_calcular.setOnClickListener {
 
+            calcularIMC()
+
+        }
     }
+
 
     private fun changeGender(){
         isMaleSelected = !isMaleSelected
@@ -140,7 +135,9 @@ class ImcAppActivity : AppCompatActivity() {
         tvEdad.setText("$edadInicial años")
     }
 
+    private fun calcularIMC() {
 
 
+    }
 
 }
