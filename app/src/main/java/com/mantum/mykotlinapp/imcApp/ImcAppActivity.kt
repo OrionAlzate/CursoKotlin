@@ -3,6 +3,7 @@ package com.mantum.mykotlinapp.imcApp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
@@ -21,6 +22,8 @@ class ImcAppActivity : AppCompatActivity() {
     private var isFemaleSelected : Boolean = false
     private var pesoInicial = 60
     private var edadInicial = 22
+    private var alturaActual = 160
+
     private  lateinit var viewMale:CardView
     private lateinit var viewFemale:CardView
     private lateinit var tv_laAltura : TextView
@@ -32,6 +35,10 @@ class ImcAppActivity : AppCompatActivity() {
     private lateinit var btnMenosEdad : FloatingActionButton
     private lateinit var btnMasEdad : FloatingActionButton
     private lateinit var btn_calcular : AppCompatButton
+
+    companion object {
+        const val IMC_KEY = "imc_result"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,9 +79,10 @@ class ImcAppActivity : AppCompatActivity() {
             setGenderColor()
         }
         rsAltura.addOnChangeListener { _, value, _ ->
+
             val decimalFormat = DecimalFormat("#.##")
-            val result = decimalFormat.format(value)
-            tv_laAltura.text = "$result cm"
+            alturaActual = decimalFormat.format(value).toInt()
+            tv_laAltura.text = "$alturaActual cm"
         }
         btnMenosPeso.setOnClickListener{
             pesoInicial--
@@ -94,10 +102,15 @@ class ImcAppActivity : AppCompatActivity() {
         }
         btn_calcular.setOnClickListener {
 
-            calcularIMC()
+            val result = calcularIMC()
+            navigateToResult(result)
+
 
         }
     }
+
+
+
 
 
     private fun changeGender(){
@@ -135,8 +148,20 @@ class ImcAppActivity : AppCompatActivity() {
         tvEdad.setText("$edadInicial años")
     }
 
-    private fun calcularIMC() {
+    private fun calcularIMC() : Double{
+        val decimalFormat = DecimalFormat("#.##")
 
+        val alturaMts : Double =  alturaActual / 100.0
+        val imc = pesoInicial / (alturaMts * alturaMts)
+        var result = decimalFormat.format(imc)
+        // Log.i("valor_imc", "El imc es $result")
+        return result.toDouble()
+    }
+
+    private fun navigateToResult(result: Double) {
+        val intent = Intent(this, ResultImcActivity::class.java)
+        intent.putExtra(IMC_KEY, result)
+        startActivity(intent)
 
     }
 
