@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.mantum.mykotlinapp.R
 import com.mantum.mykotlinapp.imcApp.ImcAppActivity.Companion.IMC_KEY
+import java.text.DecimalFormat
 
 class ResultImcActivity : AppCompatActivity() {
 
@@ -31,7 +32,10 @@ class ResultImcActivity : AppCompatActivity() {
     }
 
     private fun initUI(result: Double) {
-        tvImcResult.text = result.toString()
+
+        val df = DecimalFormat("#.##")
+        val resultDouble = df.format(result)
+        tvImcResult.text = resultDouble.toString()
         when(result){
             in 0.00..18.50 ->{ // Bajo peso
                 tvResult.setTextColor(getColor(R.color.peso_bajo))

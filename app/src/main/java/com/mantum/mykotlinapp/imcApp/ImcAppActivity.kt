@@ -102,7 +102,7 @@ class ImcAppActivity : AppCompatActivity() {
         }
         btn_calcular.setOnClickListener {
 
-            val result = calcularIMC()
+            val result : Double = calcularIMC()
             navigateToResult(result)
 
 
@@ -151,11 +151,11 @@ class ImcAppActivity : AppCompatActivity() {
     private fun calcularIMC() : Double{
         val decimalFormat = DecimalFormat("#.##")
 
-        val alturaMts : Double =  alturaActual / 100.0
-        val imc = pesoInicial / (alturaMts * alturaMts)
-        var result = decimalFormat.format(imc)
-        // Log.i("valor_imc", "El imc es $result")
-        return result.toDouble()
+        val alturaMts : Double =  alturaActual / 100.00
+        val imc : Double = pesoInicial / (alturaMts * alturaMts)
+        //var result = decimalFormat.format(imc).toDouble()
+         //Log.i("valor_imc", "El imc es $result")
+        return imc
     }
 
     private fun navigateToResult(result: Double) {
