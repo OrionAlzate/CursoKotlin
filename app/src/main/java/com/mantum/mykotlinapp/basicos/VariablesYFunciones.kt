@@ -1,13 +1,16 @@
 package com.mantum.mykotlinapp.basicos
 
 fun main(){
-    print("Variables y Funciones")
+    //VariablesYFunciones()
+    lamda()
+    val resultadoMulti = multi(5,7)
+    println("Multiplicacion: $resultadoMulti")
+
 }
 fun VariablesYFunciones() {
 
 
     /***
-     * @author Orion Alzate
      * Variables y Valores
      * val = valor o constantes
      * var = variable
@@ -102,7 +105,7 @@ fun VariablesYFunciones() {
 
     // misma función pero diferente constructor, al llamarse sólo se ingresa un para metro o dos segun lo deseado
     fun saludo(nombre:String){
-        print("Saludo a $nombre sin edad")
+        println("Saludo a $nombre sin edad")
     }
     saludo("Francisco")
     /**
@@ -120,9 +123,29 @@ fun VariablesYFunciones() {
     }
 
     var llamadoFuncReturn:String = retornarSaludo("Carlos") //almacenar el valor retornado en una variable
-    print(llamadoFuncReturn)
+    println(llamadoFuncReturn)
 
     fun restar(num1:Int, num2:Int):Int = num1 - num2 // declarado sin las llaves en una sola línea
     var resultadoResta : String = "El resultado es: ${restar(15,5)}"
 
+}
+fun lamda(){
+    /**
+     * Funciones Lamda
+     * se ejecutan en una sola linea de codigo y son anónimas y se guardan en una val o var
+     */
+
+    val suma = {x:Int, y:Int -> x+y}
+    val result = suma(2,55)
+    println("Resultado Suma lamda: $result")
+
+
+}
+
+/**
+ * Funciones de retorno
+ */
+
+fun multi(n1:Int, n2:Int):Int{
+    return n1  * n2
 }

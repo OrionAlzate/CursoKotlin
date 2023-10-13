@@ -1,5 +1,7 @@
 package com.mantum.mykotlinapp.basicos
 
+import com.mantum.mykotlinapp.toDoApp.TodoAppActivity
+
 fun main(){
 
     listaMutable()
@@ -53,10 +55,28 @@ fun listaMutable(){
     //println(listaMutable)
 
     //listaMutable.forEach {day -> println(day) }
-    listaMutable.forEach {println(it) }
+    //listaMutable.forEach {println(it) }
+
+
+    //println("Dia seleccionado: ${listaMutable[2]}")
+
+    //println(listaMutable)
+    listaMutable.remove("Miercoles") // Se elimina el elemento con ese valor.
+    //println(listaMutable)
+
+
+    var weekDays = arrayOf("Lunes", "Martes", "Miercoles","Jueves", "Viernes")
+    var arrayToMutableList = weekDays.toMutableList() // convertir un array a una lista mutable
+    println(arrayToMutableList)
+    arrayToMutableList.remove("Martes") // eliminar el dato de la lista mutable, no desde el array
+    println(arrayToMutableList)
+
+
+
 
 
 }
+
 
 
 

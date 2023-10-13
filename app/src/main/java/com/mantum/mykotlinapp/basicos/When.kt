@@ -3,11 +3,13 @@ package com.mantum.mykotlinapp.basicos
 fun main(){
 
 //    getMonth(2)
-    getMonthWhen(12)
-    getTrimestre(5)
-    getSemestre(12)
-    getTipoDato(true)
-    println(getReturn(1))
+    //getMonthWhen(12)
+    //getTrimestre(5)
+    //getSemestre(12)
+    //getTipoDato(true)
+    //println(getReturn(1))
+    weekDay(4)
+
 }
 
 /**
@@ -143,3 +145,28 @@ fun getMonth(month:Int){
 }
 
 
+fun weekDay(day: Int){
+
+    when(day){
+        1 -> println("Es lunes")
+        2 -> println("Es martes")
+        3 -> println("Es miercoles")
+        4 -> println("Es jueves")
+        5 -> println("Es viernes")
+        else -> print("No es ningún día de la semana")
+    }
+
+    // con rangos
+    var porcentaje:Int = 87
+
+    when(porcentaje){
+        in 1..20 -> println("Porcentaje Demasiado bajo: $porcentaje%")
+        in 21..40 -> println("Porcentaje muy bajo: $porcentaje%")
+        in 41..60 -> println("Porcentaje bajo: $porcentaje%")
+        in 61..80 -> println("Porcentaje medio: $porcentaje%")
+        in 81..100 -> println("Porcentaje alto: $porcentaje%")
+    }
+
+
+
+}
