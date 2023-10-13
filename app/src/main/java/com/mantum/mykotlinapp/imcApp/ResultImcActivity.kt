@@ -42,12 +42,12 @@ class ResultImcActivity : AppCompatActivity() {
                 tvResult.text = getString(R.string.tittle_bajo_pes)
                 tvDescripcion.text = getString(R.string.desc_bajo_pes)
             }
-            in 18.50..24.99 ->{ // Peso normal
+            in 18.50..25.00 ->{ // Peso normal
                 tvResult.setTextColor(getColor(R.color.peso_normal))
                 tvResult.text  = getString(R.string.tittle_pes_normal)
                 tvDescripcion.text = getString(R.string.desc_pes_normal)
             }
-            in 25.00..29.99 ->{ // Sobrepeso
+            in 25.00..30.00 ->{ // Sobrepeso
                 tvResult.setTextColor(getColor(R.color.peso_sobrepeso))
                 tvResult.text = getString(R.string.tittle_sobrepeso)
                 tvDescripcion.text = getString(R.string.desc_sobrepeso)
