@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">MyKotlinApp</string>
+
+    <!--IMC app-->
     <string name="male">Hombre</string>
     <string name="female">Mujer</string>
     <string name="btn_volver">Volver</string>
@@ -8,20 +10,19 @@
     <string name="calcular">Calcular</string>
     <string name="result_imc">Resultado:</string>
     <string name="recalcular">Recalcular</string>
-
     <string name="Error">Error</string>
-
     <string name="tittle_bajo_pes">Bajo peso</string>
     <string name="desc_bajo_pes">Estás por debajo de lo óptimo para tu peso y altura</string>
-
     <string name="tittle_pes_normal">Peso normal</string>
     <string name="desc_pes_normal">Estás en lo óptimo para tu peso y altura</string>
-
     <string name="tittle_sobrepeso">Sobrepeso</string>
     <string name="desc_sobrepeso">Estás por encima de lo óptimo para tu peso y altura</string>
-
     <string name="tittle_obesidad">Obesidad</string>
     <string name="desc_obesidad">Estás MUY por encima de lo óptimo para tu peso y altura</string>
 
+
+    <!-- Tod0 app -->
+    <string name="todo_title">Bienvenido</string>
+    <string name="todo_categorias">Categorias</string>
 
 </resources>

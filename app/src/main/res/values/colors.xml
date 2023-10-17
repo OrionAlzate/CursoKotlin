@@ -5,17 +5,28 @@
     <color name="verde_botones">#d3ffd3</color>
     <color name="morado_botones_contraste">#36b336</color>
 
+
+    <!-- colores IMC app-->
     <color name="backgroundComponent">#1D1E33</color>
     <color name="backgroundComponent_selected">#FF111328</color>
     <color name="backgroundApp">#0E0B20</color>
     <color name="backgroundButton">#EB1555</color>
     <color name="textTitulos">#FF8D8E98</color>
     <color name="background_fab">#FF6200EE</color>
-
     <color name="peso_bajo">#FFEB3B</color>
     <color name="peso_normal">#4CAf50</color>
     <color name="peso_sobrepeso">#FF5722</color>
     <color name="peso_obesidad">#F44336</color>
+
+    <!-- colores tod0 app-->
+    <color name="todo_background_card">#FF081A4A</color>
+    <color name="todo_background_disabled">#787878</color>
+    <color name="todo_background_todo_app">#FF2D4993</color>
+    <color name="todo_subtitle_text">#959595</color>
+    <color name="todo_accent">#E91E63</color>
+    <color name="todo_business_category">#FF9800</color>
+    <color name="todo_personal_category">#00BCD4</color>
+    <color name="todo_other_category">#4CAF50</color>
 
 
 
