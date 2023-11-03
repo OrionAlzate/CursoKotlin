@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MyKotlinApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/backgroundApp</item>
+         <item name="colorPrimary">#FF100D25</item>
     </style>
 
     <style name="Theme.MyKotlinApp" parent="Base.Theme.MyKotlinApp" />
@@ -13,8 +13,25 @@
 
     <style name="Theme.TodoApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/todo_background_todo_app</item>
+        <item name="colorPrimary">#2D4993</item>
     </style>
 
+    <style name="todo_subtitle">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/todo_subtitle_text</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">32dp</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">32dp</item>
+    </style>
 
+    <style name="rb_color_business">
+        <item name="buttonTint">@color/todo_business_category</item>
+    </style>
+
+    <style name="rb_color_personal">
+        <item name="buttonTint">@color/todo_personal_category</item>
+    </style>
+
+    <style name="rb_color_other">
+        <item name="buttonTint">@color/todo_other_category</item>
+    </style>
 </resources>

@@ -18,7 +18,7 @@ class CategoriesAdapter(private val categories : List<TaskCategory>):
     // override fun getItemCount() = categories.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriesViewHolder {
-
+        //adapta el formato de vista que hayamos creado, en este caso (item_task_category)
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_task_category, parent, false)
         return CategoriesViewHolder(view)
 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/todo_background_todo_app">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/et_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:hint="@string/todo_dialog_add_task"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <RadioGroup
+            android:id="@+id/rg_categoriesTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_business"
+                style="@style/rb_color_business"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/todo_business_category"
+                android:text="@string/todo_dialog_taskCategory_business"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/rb_personal"
+                style="@style/rb_color_personal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/todo_personal_category"
+                android:text="@string/todo_dialog_taskCategory_personal"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/rb_other"
+                style="@style/rb_color_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/todo_dialog_taskCategory_other"
+                android:textColor="@color/white"/>
+
+
+
+        </RadioGroup>
+        <Button
+            android:id="@+id/btn_createTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/todo_accent"
+            android:text="@string/todo_dialog_btn_createTask"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

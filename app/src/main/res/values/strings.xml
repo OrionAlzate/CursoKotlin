@@ -24,5 +24,12 @@
     <!-- Tod0 app -->
     <string name="todo_title">Bienvenido</string>
     <string name="todo_categorias">Categorias</string>
+    <string name="todo_tasks">Tareas</string>
+    <string name="todo_dialog_add_task">Escribe tu tarea</string>
+    <string name="todo_dialog_taskCategory_business">Negocios</string>
+    <string name="todo_dialog_taskCategory_personal">Personal</string>
+    <string name="todo_dialog_taskCategory_other">Otras</string>
+    <string name="todo_dialog_btn_createTask">Crear tarea</string>
+
 
 </resources>
