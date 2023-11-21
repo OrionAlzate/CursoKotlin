@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -24,36 +23,31 @@
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="40sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             style="@style/todo_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/todo_categorias"
-            />
+            android:text="@string/todo_categorias" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCategories"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
 
         <TextView
             style="@style/todo_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/todo_tasks"
-            />
+            android:text="@string/todo_tasks" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTasks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"/>
-
-
-
+            android:layout_marginHorizontal="32dp" />
 
 
     </LinearLayout>
@@ -62,10 +56,10 @@
         android:id="@+id/fab_addTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
         android:layout_margin="32dp"
         android:src="@android:drawable/ic_input_add"
         app:backgroundTint="@color/todo_accent"
-        android:layout_gravity="end|bottom"
-        app:fabSize="normal"/>
+        app:fabSize="normal" />
 
 </FrameLayout>

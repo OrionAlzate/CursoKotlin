@@ -39,7 +39,5 @@ class TasksViewHolder(view: View): RecyclerView.ViewHolder(view)  {
         )
 
 
-
-
     }
 }
