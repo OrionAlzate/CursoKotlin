@@ -6,12 +6,14 @@ import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
 import com.mantum.mykotlinapp.firstApp.FirstApp
 import com.mantum.mykotlinapp.imcApp.ImcAppActivity
+import com.mantum.mykotlinapp.superHeroApp.SuperHeroListActivity
 import com.mantum.mykotlinapp.toDoApp.TodoAppActivity
 
-class MenuActivity : AppCompatActivity() {
+class  MenuActivity : AppCompatActivity() {
     lateinit var btn_todoApp : AppCompatButton
     lateinit var btn_saludApp : AppCompatButton
     lateinit var btn_imcApp : AppCompatButton
+    lateinit var btn_shlApp : AppCompatButton
 
 
 
@@ -34,12 +36,21 @@ class MenuActivity : AppCompatActivity() {
         btn_todoApp.setOnClickListener {
             goToToDoApp()
         }
+        btn_shlApp.setOnClickListener {
+            goToShlApp()
+        }
+    }
+
+    private fun goToShlApp() {
+        val intent = Intent(this, SuperHeroListActivity::class.java)
+        startActivity(intent)
     }
 
     private fun initComponents() {
         btn_saludApp = findViewById(R.id.btn_salu)
         btn_imcApp = findViewById(R.id.btn_imcApp)
         btn_todoApp = findViewById(R.id.btn_todoApp)
+        btn_shlApp = findViewById(R.id.btn_shlApp)
     }
 
     private fun goToSaludApp(){
