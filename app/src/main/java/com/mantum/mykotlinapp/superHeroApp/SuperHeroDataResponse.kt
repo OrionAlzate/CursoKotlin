@@ -4,11 +4,16 @@ import com.google.gson.annotations.SerializedName
 
 data class SuperHeroDataResponse(
     @SerializedName("response") val response : String,
-    @SerializedName("results") val results : List<SuperHeroItemResponse>
+    @SerializedName("results-for") val resultsFor : String,
+    @SerializedName("results") val superheroes : List<SuperHeroItemResponse>
 ) {}
 
 data class SuperHeroItemResponse(
-    @SerializedName("id") val id : String,
+    @SerializedName("id") val superheroId : String,
     @SerializedName("name") val name : String,
-    @SerializedName("image") val image : String
+    @SerializedName("image") val image : SuperHeroImagerUrlResponse
 ) {}
+
+data class SuperHeroImagerUrlResponse(
+    @SerializedName("url") val url : String
+)

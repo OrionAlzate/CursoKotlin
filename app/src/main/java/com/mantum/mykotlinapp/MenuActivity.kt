@@ -10,17 +10,15 @@ import com.mantum.mykotlinapp.superHeroApp.SuperHeroListActivity
 import com.mantum.mykotlinapp.toDoApp.TodoAppActivity
 
 class  MenuActivity : AppCompatActivity() {
+
     lateinit var btn_todoApp : AppCompatButton
     lateinit var btn_saludApp : AppCompatButton
     lateinit var btn_imcApp : AppCompatButton
     lateinit var btn_shlApp : AppCompatButton
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-
 
         initComponents()
         initListeners()
@@ -39,11 +37,6 @@ class  MenuActivity : AppCompatActivity() {
         btn_shlApp.setOnClickListener {
             goToShlApp()
         }
-    }
-
-    private fun goToShlApp() {
-        val intent = Intent(this, SuperHeroListActivity::class.java)
-        startActivity(intent)
     }
 
     private fun initComponents() {
@@ -67,7 +60,11 @@ class  MenuActivity : AppCompatActivity() {
         val intent = Intent(this, TodoAppActivity::class.java)
         startActivity(intent)
     }
+
+    private fun goToShlApp() {
+        val intent = Intent(this, SuperHeroListActivity::class.java)
+        startActivity(intent)
+    }
 }
 
 
-// esto es un comentario desde la rama otraRAma

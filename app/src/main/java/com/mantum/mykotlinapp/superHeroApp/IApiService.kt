@@ -8,6 +8,6 @@ interface IApiService {
 
 
     @GET("/api/10160551525467773/search/{name}")
-    suspend fun getSuperHero(@Path("name") superHerName : String) : Response<SuperHeroDataResponse>
+    suspend fun getSuperHero(@Path("name") superHeroName : String) : Response<SuperHeroDataResponse>
 
 }
